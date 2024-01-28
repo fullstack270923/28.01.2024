@@ -17,6 +17,15 @@ $(() => {
         {
         'click': () => {
             $('#my_h1').css( {color: 'green', 'font-weight': 'bold'} )
+            // text - will only change the text without html tags
+            //$('#my_h1').text(`Hello from JQuery! <br /> ${Date()}`)
+
+            $('#my_h1').css('color', (index, currentColor) => {
+                    const newColor = currentColor === 'red' ? 'green' : 'red'
+                    return newColor
+             });
+
+            $('#my_h1').html(`Hello from JQuery! <br /> ${Date()}`)
         },
         'mouseenter': () => {
             $('#my_h1').css( {color: 'blue', 'font-weight': 'bold'} )
@@ -37,7 +46,7 @@ $(() => {
 
     $('#my_h1').css( {color: 'red', 'font-weight': 'bold'} )
 
-    // create a form with 4 buttons
+    // create 4 buttons
     // create a <p>Hello JQuery</p>
     // create a div id="result"
     // import jquery

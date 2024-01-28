@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JQuery 1</title>
+    <!-- <script src="jquery3.7.1.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p id="my_h1" style="color:red">Hello from JQuery!</p>
+    <br />
+    <input type="text" value="name" id="txt_name" />
+    <br />
+    <button id="btn1">Click</button>
+    <script>
+        //$('#btn1').on('click', () => { })
+        $('#btn1').click(() => {
+            $('#txt_name').val('button 1 ')
+        })
+
+        
+        // .on('mouseenter', () => { } )
+        // .on('mouseleave', () => { } )
+        $('#btn1').hover(
+            // 'mouseenter'
+            () => {
+                $('#btn1').css({ color: 'red' })
+            },
+            // 'mouseleave'
+            () => {
+                $('#btn1').css({ color: 'green' })
+            })
+
+        $('#btn1').mouseenter(
+            () => {
+                $('#btn1').css({ color: 'red' })
+            })
+        $('#btn1').mouseleave(
+            () => {
+                $('#btn1').css({ color: 'green' })
+            })
+
+    </script>
+</body>
+
+</html>
