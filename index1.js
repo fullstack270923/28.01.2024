@@ -36,4 +36,16 @@ $(() => {
     //$('#btn1').off() // remove all
 
     $('#my_h1').css( {color: 'red', 'font-weight': 'bold'} )
+
+    // create a form with 4 buttons
+    // create a <p>Hello JQuery</p>
+    // create a div id="result"
+    // import jquery
+    // on for ready -
+    //     add event listener to 3 buttons
+    //     button1 'click' - add the Date() to the div
+    //     button2 'click' - change the background of the <p> to a random color
+    //     button3 'mouseenter' - change the text of p to Date()
+    //     button4 'click' - remove all events from all the buttons
+
 })
